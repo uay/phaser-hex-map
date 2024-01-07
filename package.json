@@ -1,0 +1,22 @@
+{
+  "name": "phaser-hex-map",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --outfile=public/dist/index.js",
+    "dev": "esbuild src/index.ts --bundle --outfile=public/dist/index.js --watch --serve=9000 --servedir=public",
+    "postinstall": "rm -rf public/vendor/phaser@3.60.0 && mkdir -p public/vendor/phaser@3.60.0/dist && cp -r node_modules/phaser/dist public/vendor/phaser@3.60.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/noisejs": "^0.0.31",
+    "esbuild": "^0.19.8"
+  },
+  "dependencies": {
+    "noisejs": "^2.1.0",
+    "phaser": "^3.70.0"
+  }
+}
